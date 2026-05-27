@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">SnacBerry</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍓 SNACBERRY</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/background">Background</a>
+            <a href="/founder">Founder</a>
+            <a href="/past">Our Past</a>
+            <a href="/shop">Shop</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>SnacBerry</h1>
+            <p class="tagline">Founded in <span th:text="${companyStarted}"></span></p>
+            <p class="mission" th:text="${mission}"></p>
+            <a href="/shop" class="btn">Shop Now →</a>
+        </section>
+
+        <section class="preview-cards">
+            <div class="card">
+                <h2>Our Background</h2>
+                <p>How SnacBerry began...</p>
+                <a href="/background">Read story →</a>
+            </div>
+            <div class="card">
+                <h2>Meet the Founder</h2>
+                <p th:text="'Meet ' + ${founderName}"></p>
+                <a href="/founder">Read story →</a>
+            </div>
+            <div class="card">
+                <h2>Our Journey</h2>
+                <p>2019 to today</p>
+                <a href="/past">Read story →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 SnacBerry. All rights reserved.</p>
+    </footer>
+</body>
+</html>
