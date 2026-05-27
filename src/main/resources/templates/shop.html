@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SnacBerry</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍓 SNACBERRY</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/background">Background</a>
+            <a href="/founder">Founder</a>
+            <a href="/past">Our Past</a>
+            <a href="/shop">Shop</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Berry Snacks</h1>
+        <p class="subtitle">Made with real berries. Always. Never artificial flavors.</p>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="/images/product1.jpg" alt="Berry Crunch Chips">
+                <h2>Berry Crunch Chips</h2>
+                <p class="price">$4.99</p>
+                <p class="description">Freeze-dried mixed berries with a satisfying crunch. 100% real fruit. No sugar added.</p>
+                <button class="add-to-cart" data-product="Berry Crunch Chips">Add to Cart →</button>
+                <a href="/background" class="related-blog">📖 Read the story behind this snack</a>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="/images/product2.jpg" alt="Spicy Berry Bites">
+                <h2>Spicy Berry Bites</h2>
+                <p class="price">$5.99</p>
+                <p class="description">Sweet strawberries meet a kick of chili and lime. Unexpected. Addictive.</p>
+                <button class="add-to-cart" data-product="Spicy Berry Bites">Add to Cart →</button>
+                <a href="/founder" class="related-blog">👩‍🍳 Sarah's personal favorite</a>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="/images/product3.jpg" alt="Dark Chocolate Berries">
+                <h2>Dark Chocolate Berries</h2>
+                <p class="price">$6.99</p>
+                <p class="description">72% dark chocolate enrobed around freeze-dried raspberries and blueberries.</p>
+                <button class="add-to-cart" data-product="Dark Chocolate Berries">Add to Cart →</button>
+                <a href="/past" class="related-blog">🏆 Our best-seller since 2020</a>
+            </div>
+        </div>
+        
+        <!-- Cart Message Popup -->
+        <div class="cart-message" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <p>© 2024 SnacBerry. All rights reserved.</p>
+        <p class="footer-small">Free shipping on orders $30+</p>
+    </footer>
+    
+    <script>
+        // Simple shopping cart functionality
+        const cartMessage = document.querySelector('.cart-message');
+        
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                cartMessage.textContent = productName + ' added to cart! 🍓';
+                cartMessage.style.display = 'block';
+                
+                // Hide message after 2 seconds
+                setTimeout(() => {
+                    cartMessage.style.display = 'none';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
