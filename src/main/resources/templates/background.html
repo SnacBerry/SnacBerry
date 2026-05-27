@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Background - SnacBerry</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍓 SNACBERRY</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/background">Background</a>
+            <a href="/founder">Founder</a>
+            <a href="/past">Our Past</a>
+            <a href="/shop">Shop</a>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <h1 th:text="${title}"></h1>
+        <img th:src="${image}" alt="SnacBerry background" class="featured-image">
+        
+        <div class="content">
+            <p>SnacBerry started in a small kitchen in Austin, Texas. Our founder Sarah Johnson had a simple idea: create berry snacks that are both healthy and delicious.</p>
+            
+            <p>For years, the snack industry focused on either taste OR health. SnacBerry was born to change that. We believed berries could be the perfect base for snacks that satisfy cravings while nourishing your body.</p>
+            
+            <p>Our first product, Berry Crunch Chips, was an instant hit. Within months, we expanded from local farmers markets to stores across Texas.</p>
+            
+            <p>Today, SnacBerry partners with organic berry farms and uses 100% recyclable packaging. Every product tells a story of craftsmanship, care, and commitment to real ingredients.</p>
+            
+            <p>We're proud to be women-owned, locally focused, and berry-obsessed.</p>
+        </div>
+        
+        <div class="shop-link">
+            <a href="/shop" class="btn">Shop Our Berry Snacks →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 SnacBerry. All rights reserved.</p>
+    </footer>
+</body>
+</html>
