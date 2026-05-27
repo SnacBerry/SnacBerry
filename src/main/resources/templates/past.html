@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Past - SnacBerry</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍓 SNACBERRY</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/background">Background</a>
+            <a href="/founder">Founder</a>
+            <a href="/past">Our Past</a>
+            <a href="/shop">Shop</a>
+        </nav>
+    </header>
+
+    <main class="timeline">
+        <h1>Our Journey: <span th:text="${year}"></span></h1>
+        <img th:src="${image}" alt="SnacBerry history" class="featured-image">
+        
+        <div class="timeline-container">
+            <div class="milestone">
+                <h2>2019: The Beginning</h2>
+                <p>First 100 bags sold at Austin Farmers Market. Sarah's kitchen becomes the first SnacBerry factory.</p>
+            </div>
+            
+            <div class="milestone">
+                <h2>2020: The Growth</h2>
+                <p>Moved from home kitchen to commercial kitchen. Hired first 5 employees. Expanded to 10 stores across Texas.</p>
+            </div>
+            
+            <div class="milestone">
+                <h2>2021: The Challenge</h2>
+                <p>Navigated supply chain issues. Pivoted to direct-to-consumer shipping. Grew online sales by 300%.</p>
+            </div>
+            
+            <div class="milestone">
+                <h2>2022: The Recognition</h2>
+                <p>Voted "Best New Snack Brand" by Food & Wine Magazine. Featured in Forbes "30 Under 30" food category.</p>
+            </div>
+            
+            <div class="milestone">
+                <h2>2023: The Expansion</h2>
+                <p>Launched three new products. Partnered with organic berry farms in Oregon. Reached 50,000 monthly customers.</p>
+            </div>
+            
+            <div class="milestone">
+                <h2>2024: Today</h2>
+                <p>From 100 bags to 100,000 bags monthly. 25 employees. Shipping nationwide. Still berry-obsessed.</p>
+            </div>
+        </div>
+        
+        <div class="shop-link">
+            <a href="/shop" class="btn">Shop Our Latest Creations →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 SnacBerry. All rights reserved.</p>
+    </footer>
+</body>
+</html>
