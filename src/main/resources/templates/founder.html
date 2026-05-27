@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder - SnacBerry</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍓 SNACBERRY</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/background">Background</a>
+            <a href="/founder">Founder</a>
+            <a href="/past">Our Past</a>
+            <a href="/shop">Shop</a>
+        </nav>
+    </header>
+
+    <main class="founder-page">
+        <div class="founder-grid">
+            <div class="founder-image">
+                <img th:src="${image}" alt="Founder Sarah Johnson">
+            </div>
+            <div class="founder-story">
+                <h1 th:text="'Meet ' + ${name}"></h1>
+                <p class="quote" th:text="'\"' + ${quote} + '\"'"></p>
+                
+                <p>Sarah Johnson spent 10 years as a corporate lawyer. Every day, she'd walk past vending machines filled with artificial snacks and wonder: why can't healthy snacks taste good?</p>
+                
+                <p>In 2019, she took a leap of faith. She quit her job, emptied her savings, and started experimenting in her home kitchen. Her first batch of Berry Crunch Chips sold out in 48 hours at the local farmers market.</p>
+                
+                <p>What started as a one-woman operation now employs 25 people. Sarah still personally approves every new recipe, and she still tests everything in her home kitchen first.</p>
+                
+                <p>"I wanted to create snacks I'd feel good about feeding my own family," Sarah says. "That never changes, no matter how big we grow."</p>
+                
+                <p>Today, Sarah splits her time between product development and mentoring other women entrepreneurs. She believes the best ideas often come from taking risks.</p>
+            </div>
+        </div>
+        
+        <div class="shop-link">
+            <a href="/shop" class="btn">Shop Sarah's Favorites →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 SnacBerry. All rights reserved.</p>
+    </footer>
+</body>
+</html>
